@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="bower_components/bootstrap-table/dist/bootstrap-table.css">
+<link rel="stylesheet" href="bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+<style>
+	.bs-table .fa {
+		font-size: 16px;
+		margin-right: 5px;
+		cursor: pointer;
+	}
+</style>
+<div class="breadcrumbs" id="breadcrumbs">
+	<ul class="breadcrumb">
+		<li class="active">分屏/二级屏幕配置</li>
+	</ul>
+	<div class="nav-search">
+		<button type="button" class="btn btn-white btn-sm btn-round">新建分屏</button>
+		<button type="button" class="btn btn-white btn-sm btn-round">新建二级屏幕</button>
+	</div>
+</div>
+<div class="page-content">
+	<div class="row">
+		<div class="col-sm-12">
+			<form action="" class="mb15">
+				<div class="row form-group">
+					<div class="col-sm-6">
+						<label for="" class="pull-left">屏幕ID</label>
+						<div class="col-sm-8">
+							<input type="text" class="">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<label for="" class="pull-left">屏幕名称</label>
+						<div class="col-sm-8">
+							<input type="text" class="">
+						</div>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<label for="" class="pull-left">操作时间</label>
+						<div class="col-sm-8">
+							从<input type="text" class=" js-date-widget" placeholder="开始时间">
+							到<input type="text" class=" js-date-widget" placeholder="结束时间">
+						</div>
+					</div>	
+				</div>
+				<div class="row text-center">
+					<button type="button" class="btn btn-primary">查询</button>
+					<input type="reset" value="重置" class="btn">
+				</div>
+			</form>
+			<!-- 列表开始 -->
+			<table class="bs-table table-no-bordered" id="splitscreen_table"></table>
+			<!-- 列表结束 -->
+		</div>
+	</div>
+</div>
+<script src="bower_components/bootstrap-table/dist/bootstrap-table.js"></script>
+<script src="bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/screen/js/list.js"></script>

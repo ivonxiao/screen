@@ -1,0 +1,59 @@
+<div class="modal fade" id="elementSubscreenModal" tabindex="-1" role="dialog" aria-labelledby="elementImageModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">设置二级屏幕属性</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<p>元素属性</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">选择图片:</label>
+						<div class="col-sm-5">
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">元素名称:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="element_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">元素描述:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="element_desc">
+						</div>
+					</div>
+					<p>跳转动作</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">业务类型:</label>
+						<div class="col-sm-5">
+							<select name="business_type" id="" class="form-control">
+								<option value="1">视频</option>
+								<option value="2">网页</option>
+								<option value="3">应用</option>
+								<option value="4">二级屏幕</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">选择二级屏幕:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="subscreen_id">
+						</div>
+						<div class="col-sm-3">
+							<button class="btn">选择屏幕</button>
+						</div>
+					</div>
+					<input type="hidden" name="type" value="4">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="modal_apply_subscreen_info">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>		
+			</div>
+		</div>
+	</div>
+</div>

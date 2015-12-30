@@ -1,0 +1,77 @@
+.navbar {
+	margin: 0;
+	background-color: #438eb9;
+	border-width: 0;
+}
+.navbar .navbar-brand {
+	color: #fff;
+}
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+	color: #fff;
+}
+.aspire-nav>li {
+	line-height: 45px;
+	height: 45px;
+}
+.aspire-nav>li.light-blue>a {
+	background-color: #62a8d1;
+}
+.aspire-nav>li>a:hover, .aspire-nav>li>a:focus, .aspire-nav>li.open>a {
+	color: #fff;
+}
+.aspire-nav>li.light-blue>a:hover, .aspire-nav>li.light-blue>a:focus, .aspire-nav>li.open.light-blue>a {
+	background-color: #579ec8;
+}
+.navbar .aspire-nav>li>a {
+	padding: 0 8px;
+	line-height: inherit;
+	color: #fff;
+}
+.user-info {
+	max-width: 100px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
+    line-height: 15px;
+    position: relative;
+    top: 6px;
+}
+.user-info small {
+	display: block;
+}
+.aspire-nav {
+	margin: 0;
+}
+.aspire-nav .nav-user-photo {
+	margin: -4px 8px 0 0;
+    border-radius: 100%;
+    border: 2px solid #FFF;
+    max-width: 40px;
+}
+.aspire-nav .caret {
+	border-width: 6px;
+}
+.navbar .navbar-toggle {
+	border: 1px solid transparent;
+    width: 40px;
+    height: 35px;
+    line-height: 0;
+    padding: 0 0 1px;
+    text-align: center;
+}
+.navbar .navbar-toggle .icon-bar {
+	background-color: #FFF;
+    border-radius: 0;
+    width: 24px;
+    margin-left: 7px;
+}
+@media (max-width: 767px){
+	.navbar-nav .open .dropdown-menu {
+		border:1px solid rgba(0, 0, 0, .15);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+}

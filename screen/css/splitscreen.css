@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+.screen-oprate-widget {
+	min-height: 300px;
+	overflow: auto;
+}
+.base-bg-gridster li {
+	background-color: #E7F2FD;
+}
+/*栅格操作区*/
+.gridster .js-oprate-grid {
+	margin: 0;
+}
+.js-oprate-grid li {
+	background-color: #f3f3f3;
+	overflow: hidden;
+}
+
+/*分屏元素*/
+.element-list {
+	text-align: center;
+}
+.element-list li {
+	display: inline-block;
+}
+.element-list img {
+	width: 80px;
+	height: 80px;
+}
+.element-list-wrapper .fa-plus-circle {
+	position: absolute;
+	z-index: 1;
+	right: 5px;
+	top: 5px;
+}
+.element-list-wrapper,
+.element-list-wrapper .carousel,
+.element-list-wrapper .carousel-inner,
+.element-list-wrapper .item{
+	height: inherit;
+}
+.element-list-wrapper img {
+	width: 100%;
+	height: 100%!important;
+}
+.element-operate-icons {
+	position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #99bcdf;
+    opacity: 0.75;
+    text-align: center;
+    transition: all 0.3s;
+}
+.js-oprate-grid li:hover .element-operate-icons{
+	top: 0;
+	transition: all 0.3s;
+}
+.element-operate-icons .fa {
+	font-size: 26px;
+	position: relative;
+	top: 50%;
+	margin-right: 5px;
+    cursor: pointer;
+}
+/*分屏列表*/
+.listcarousel-setting-container {
+	position: absolute;
+	z-index: 2;
+}
+.listcarousel-setting-container ul {
+	margin: 0;
+	border: 1px solid #999;
+	box-shadow: 2px 2px 2px #999, -2px -2px 2px #999, 2px -2px 2px #999,-2px 2px 2px #999
+}
+.listcarousel-setting-container li {
+	border-bottom: 1px solid #999;
+}
+.listcarousel-setting-container img {
+	width: 100%;
+	height: 100%;
+}
+.listcarousel-setting-container .element-name {
+	display: block;
+	height: 100%;
+	text-align: center;
+}
+.listcarousel-setting-container .operate-icon-container {
+	position: absolute;
+	width: 100%;
+	padding: 5px;
+	text-align: right;
+}
+.listcarousel-setting-container.horizontal .operate-icon-container,
+.listcarousel-setting-container.horizontal ul,
+.listcarousel-setting-container.horizontal li{
+	height: 100%;
+}
+.listcarousel-setting-container.horizontal li {
+	float: left;
+	width: 140px;
+}
+.listcarousel-setting-container .opehorizontalrate-icon-container .fa {
+	font-size: 24px;
+	cursor: pointer;
+}

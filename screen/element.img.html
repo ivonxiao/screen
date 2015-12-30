@@ -1,0 +1,82 @@
+<div class="modal fade" id="elementImageModal" tabindex="-1" role="dialog" aria-labelledby="elementImageModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">设置图片属性</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<p>元素属性</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">选择图片:</label>
+						<div class="col-sm-5">
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">列表图片:</label>
+						<div class="col-sm-5">
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">元素名称:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="element_name">
+						</div>
+					</div>
+					<p>跳转动作</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">业务类型:</label>
+						<div class="col-sm-5">
+							<select name="business_type" id="" class="form-control">
+								<option value="1">无</option>
+								<option value="2">应用</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">应用名称:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="app_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">包名:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="package_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">类名:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="class_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">应用URL:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="app_url">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">其它参数:</label>
+						<div class="col-sm-5 js-newparam-container">
+							<span class="col-sm-6">参数名</span>
+  							<span class="col-sm-6">参数值</span>
+						</div>
+						<div>
+							<button type="button" class="btn js-btn-addmore">新增参数</button>
+						</div>
+					</div>
+					<input type="hidden" name="type" value="1">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="modal_apply_image_info">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>		
+			</div>
+		</div>
+	</div>
+</div>

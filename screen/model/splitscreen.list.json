@@ -1,0 +1,16 @@
+{
+	"total": 30,
+	"rows": [{
+		"screen_id": "aaa",
+		"screen_name": "未来电视教育分屏",
+		"state": "待审核",
+		"operate_time": "2015-12-12",
+		"release_time": "2015-12-30"
+	}, {
+		"screen_id": "bbb",
+		"screen_name": "未来电视教育二级分屏",
+		"state": "待验证",
+		"operate_time": "2015-12-12",
+		"release_time": "2015-12-30"
+	}]
+}

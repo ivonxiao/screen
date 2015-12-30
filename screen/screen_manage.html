@@ -1,0 +1,448 @@
+<link rel="stylesheet" href="/bower_components/gridster/dist/jquery.gridster.min.css">
+<link rel="stylesheet" href="/bower_components/jquery-ui/themes/base/all.css">
+<link rel="stylesheet" href="/css/atom.css">
+<link rel="stylesheet" href="/screen/css/splitscreen.css">
+<!-- <script id="template_screen_widget" type="text/x-handlebars-template">
+	<div class="widget-box">
+		<div class="widget-header">
+			<h5 class="widget-title">{{name}}</h5>
+			<div class="widget-toolbar">
+				<button class="btn btn-white btn-sm btn-round" id="add">
+                    <i class="ace-icon glyphicon glyphicon-plus red2"></i>
+                     新建分屏 
+                </button>
+			</div>
+		</div>
+		<div class="widget-body">
+			<div class="widget-main">
+				<div class="gridster">
+					<ul class="splitscreen-container-list" id="{{id}}">
+						{{{list_html}}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</script> -->
+<style>
+</style>
+<div class="breadcrumbs" id="breadcrumbs">
+	<ul class="breadcrumb">
+		<li>
+			<a href="#">分屏</a>
+		</li>
+		<li class="active">新建分屏</li>
+	</ul>
+	<div class="nav-search">
+		<button type="button" class="btn btn-white btn-sm btn-round">引用分屏模板</button>
+	</div>
+</div>
+<div class="page-content" id="page_inner_content">
+	<div class="row">
+		<div class="col-sm-6 widget-container-col" id="screen_widget_container">
+			<div class="widget-box">
+				<div class="widget-header">
+					<h5 class="widget-title">屏幕编辑区</h5>
+					<div class="widget-toolbar">
+						<button class="btn btn-white btn-sm btn-round" id="add">
+		                    <i class="ace-icon glyphicon glyphicon-plus red2"></i>
+		                     新建分屏 
+		                </button>
+					</div>
+				</div>
+				<!-- 屏幕操作区域 -->
+				<div class="widget-body">
+					<div class="widget-main screen-oprate-widget" id="screen_oprate_wrapper">
+
+					</div>
+				</div>
+				<!-- 屏幕操作区域结束 -->
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="widget-box">
+				<div class="widget-header">
+					<div class="wizard" data-initialize="wizard">
+						<div class="wizard-list-wrapper steps-container">
+							<ul class="steps">
+								<li data-step="1" class="active">
+									<span class="step">1</span>
+									<span class="title">分屏属性</span>
+								</li>
+
+								<li data-step="2">
+									<span class="step">2</span>
+									<span class="title">分屏元素</span>
+								</li>
+
+								<li data-step="3">
+									<span class="step">3</span>
+									<span class="title">分屏授权</span>
+								</li>
+
+								<li data-step="4">
+									<span class="step">4</span>
+									<span class="title">分屏编辑</span>
+								</li>
+							</ul>
+						</div>
+						<hr />
+						<div class="step-content">
+							<div class="step-pane active" data-step="1">
+								<form action="" class="form-horizontal">
+	<div class="form-group">
+		<label for="" class="required col-sm-3 control-label">分屏ID</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" placeholder="系统自动生成" disabled id="splitscreen_id">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_title" class="required col-sm-3 control-label">分屏标题</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" placeholder="10个字以内" id="splitscreen_title" name="splitscreen_title">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_name" class="required col-sm-3 control-label">分屏名称</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" placeholder="4个字以内" id="splitscreen_name" name="splitscreen_name">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_description" class="required col-sm-3 control-label">分屏描述</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" placeholder="20个字以内" id="splitscreen_description" name="splitscreen_description">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="required col-sm-3 control-label">分屏类别</label>
+		<div class="col-sm-8">
+			<div class="col-sm-6">
+				<label for="splitscreen_category1">一类</label>
+				<select id="splitscreen_category1" class="form-control" name="splitscreen_category1">
+					<option value="1">公共分屏</option>
+					<option value="2">独立分屏</option>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<label for="splitscreen_category2">二类</label>
+				<select id="splitscreen_category2" class="form-control" name="splitscreen_category2">
+					<option value="1">未来电视</option>
+					<option value="2">银河</option>
+					<option value="3">百事通</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_version" class="required col-sm-3 control-label">适用的最低分屏程序版本</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" placeholder="4个字以内" id="splitscreen_version" name="splitscreen_version">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_resolution" class="required col-sm-3 control-label">分屏分辨率</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" value="1080P" disabled id="splitscreen_resolution" name="splitscreen_resolution">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_gridrow" class="required col-sm-3 control-label">栅格行数</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" value="3" id="splitscreen_gridrow" name="splitscreen_gridrow">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_gridcol" class="required col-sm-3 control-label">栅格列数</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" value="5" id="splitscreen_gridcol" name="splitscreen_gridcol">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_extracol" class="required col-sm-3 control-label">扩展格列数</label>
+		<div class="col-sm-7">
+			<input type="text" class="form-control" value="" id="splitscreen_extracol" name="splitscreen_extracol">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_logo" class="required col-sm-3 control-label">LOGO图片</label>
+		<div class="col-sm-7">
+			<input type="file" class="form-control" value="" id="splitscreen_logo" name="splitscreen_logo">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="splitscreen_bglogo" class="required col-sm-3 control-label">分屏背景图片</label>
+		<div class="col-sm-7">
+			<input type="file" class="form-control" value="" id="splitscreen_bglogo" name="splitscreen_bglogo">
+		</div>
+	</div>
+	<div class="form-group text-center">
+		<button class="btn" id="next2element" type="button">下一步</button>
+		<input type="reset" name="" id="" value="重置" class="btn btn-warning">
+	</div>
+</form>
+							</div>
+							<div class="step-pane" data-step="2">
+								<div>
+	<p>
+		<button type="button" class="btn js-add-canvas">添加容器</button>
+	</p>
+	<h3>分屏元素</h3>
+	<ul class="element-list">
+		<li class="thumbnail">
+			<img src="/images/default.png"  alt="" data-type="1">
+			<span class="element-type-text">图片</span>
+		</li>
+		<li class="thumbnail">
+			<img src="/images/default.png"  alt="" data-type="2">
+			<span class="element-type-text">视频</span>
+		</li>
+		<li class="thumbnail">
+			<img src="/images/default.png"  alt="" data-type="3">
+			<span class="element-type-text">网页</span>
+		</li>
+		<li class="thumbnail">
+			<img src="/images/default.png" alt="" data-type="4">
+			<span class="element-type-text">二级屏幕</span>
+		</li>
+	</ul>
+	<div class="form-group text-center">
+		<button class="btn btn_wizard_back" type="button">上一步</button>
+		<button type="button" class="btn btn-primary" id="save_screen_btn">
+		保存	
+		</button>
+		<button type="button" class="btn">
+			另存为模板
+		</button>
+		<button class="btn" type="button" id="next_to_authorize">下一步</button>
+	</div>
+</div>
+
+							</div>
+							<div class="step-pane active" data-step="3">
+								<div>
+	<form action="" class="form-horizontal">
+		<div class="form-group">
+			<label for="splitscreen_name" class="required col-sm-3 control-label">下属账号</label>
+			<div class="col-sm-7">
+				<select name="" id="" class="form-control">
+					<option value="">test</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group text-center">
+			<button class="btn btn_wizard_back" type="button">上一步</button>
+			<button type="button" class="btn btn-primary" id="save_authorize_btn">
+			确认	
+			</button>
+			<input type="reset" value="重置" class="btn btn-warning">
+			<button class="btn hidden" type="button" id="next_to_edit">下一步</button>
+		</div>
+	</form>
+</div>
+
+							</div>
+						</div>
+						<!-- <div class="wizard-actions">
+							<button class="btn btn-prev">
+								<i class="ace-icon fa fa-arrow-left"></i>
+								上一步
+							</button>
+						
+							<button class="btn btn-success btn-next" data-last="保存">
+								下一步
+								<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+							</button>
+						</div> -->
+					</div>
+					<!-- 模态对话框 -->
+					<div class="modal fade" id="elementListSettingModal" tabindex="-1" role="dialog" aria-labelledby="elementListSettingModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">设置列表属性</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="" class="control-label">列表类型:</label>
+						<select name="" id="" class="form-control">
+							<option value="">文本</option>
+							<option value="">图片</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label">列表方向:</label>
+						<select name="" id="" class="form-control">
+							<option value="">水平</option>
+							<option value="">垂直</option>
+						</select>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>		
+			</div>
+		</div>
+	</div>
+</div>
+					<div class="modal fade" id="elementImageModal" tabindex="-1" role="dialog" aria-labelledby="elementImageModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">设置图片属性</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<p>元素属性</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">选择图片:</label>
+						<div class="col-sm-5">
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">列表图片:</label>
+						<div class="col-sm-5">
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">元素名称:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="element_name">
+						</div>
+					</div>
+					<p>跳转动作</p>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">业务类型:</label>
+						<div class="col-sm-5">
+							<select name="business_type" id="" class="form-control">
+								<option value="1">无</option>
+								<option value="2">应用</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">应用名称:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="app_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">包名:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="package_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">类名:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="class_name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">应用URL:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="app_url">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">其它参数:</label>
+						<div class="col-sm-5 js-newparam-container">
+							<span class="col-sm-6">参数名</span>
+  							<span class="col-sm-6">参数值</span>
+						</div>
+						<div>
+							<button type="button" class="btn js-btn-addmore">新增参数</button>
+						</div>
+					</div>
+					<input type="hidden" name="type" value="1">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="modal_apply_image_info">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>		
+			</div>
+		</div>
+	</div>
+</div>
+					<div class="modal fade" id="elementGlobalPropModal" tabindex="-1" role="dialog" aria-labelledby="elementGlobalPropModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">设置元素全局属性</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<span class="control-label">是否允许落焦:</span>
+						<label for="">
+							<input type="radio" name="" id="">是
+						</label>
+						<label for="">
+							<input type="radio" name="" id="">否
+						</label>
+					</div>
+					<div class="form-group">
+						<span class="control-label">是否设置成推荐位:</span>
+						<label for="">
+							<input type="radio" name="" id="">是
+						</label>
+						<label for="">
+							<input type="radio" name="" id="">否
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/bower_components/handlebars/handlebars.js"></script>
+<script src="/bower_components/underscore/underscore.js"></script>
+<script src="/bower_components/backbone/backbone.js"></script>
+<script src="/bower_components/fuelux/js/wizard.js"></script>
+<script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="/bower_components/gridster/dist/jquery.gridster.js"></script>
+<script src="/bower_components/jquery-mockjax/dist/jquery.mockjax.js"></script>
+<!-- 模板文件 -->
+<script src="/screen/template/element2.js"></script>
+<script src="/screen/template/elementlist.js"></script>
+<!-- <script src="../js/static/chrome-tabs/chrome-tabs.js"></script> -->
+<script src="/screen/js/create_splitscreen.js"></script>
+<script>
+	$.mockjax({
+		type: 'post',
+		url: '/splitscreen/addprop',
+		contentType: 'application/json',
+		responseText: {
+			screenId: 1,
+			extra_cols: 2,
+			rows: 3,
+			cols: 4,
+			title: '分屏1',
+			name: '第一屏',
+			description: '这只是假定的测试数据',
+			category1: 1,
+			category2: 2,
+			min_version: 2,
+			resolution: '1080P',
+			logo: '/url-logo.png',
+			bglogo: '/url-bglogo.png'
+		}
+	});
+	
+</script>

@@ -1,0 +1,45 @@
+{
+	"screenId": "aaa",
+	"extra_cols": 2,
+	"rows": 3,
+	"cols": 4,
+	"title": "分屏1",
+	"name": "第一屏",
+	"description": "这只是假定的测试数据",
+	"category1": 1,
+	"category2": 2,
+	"min_version": 2,
+	"resolution": "1080P",
+	"logo": "images/logo.png",
+	"bglogo": "images/bg-logo.png",
+	"layout" : [{
+		"col": 1,
+		"row": 1,
+		"size_x": 1,
+		"size_y": 1
+	},
+	{
+		"col": 3,
+		"row": 2,
+		"size_x": 1,
+		"size_y": 1
+	}],
+	"elements": [{
+		"type" : 3,
+		"list" : [{
+			"name" : "网页测试",
+			"src" : "images/avatars/avatar.png"
+		}]
+	},
+	{
+		"type" : 1,
+		"list" : [{
+			"name" : "头像1",
+			"src" : "images/avatars/avatar1.png"
+		},
+		{
+			"name" : "头像2",
+			"src" : "images/avatars/avatar2.png"
+		}]
+	}]
+}
