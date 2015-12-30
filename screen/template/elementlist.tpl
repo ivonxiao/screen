@@ -7,7 +7,7 @@
 	{{#each elements}}
 		<li>
 			<img src="{{this.thumbnail_src}}" class="element-thumbnailimg">
-			<span class="element-name">{{this.name}}</span>
+			<span class="element-name">{{this.element_name}}</span>
 		</li>
 	{{/each}}
 	</ul>

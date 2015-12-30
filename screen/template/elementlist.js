@@ -6,7 +6,7 @@ templates['elementlist.tpl'] = template({"1":function(container,depth0,helpers,p
   return "		<li>\r\n			<img src=\""
     + alias2(alias1((depth0 != null ? depth0.thumbnail_src : depth0), depth0))
     + "\" class=\"element-thumbnailimg\">\r\n			<span class=\"element-name\">"
-    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
+    + alias2(alias1((depth0 != null ? depth0.element_name : depth0), depth0))
     + "</span>\r\n		</li>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
