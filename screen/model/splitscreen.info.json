@@ -28,18 +28,29 @@
 		"type" : 3,
 		"list" : [{
 			"name" : "网页测试",
-			"src" : "images/avatars/avatar.png"
+			"src" : "images/avatars/avatar.png",
+			"description" : "描述",
+			"url" : "http://test.com/"
 		}]
 	},
 	{
 		"type" : 1,
+		"list_direction" : 1,
+		"list_content" : 2,
 		"list" : [{
-			"name" : "头像1",
-			"src" : "images/avatars/avatar1.png"
+			"element_name" : "头像1",
+			"src" : "images/avatars/avatar1.png",
+			"thumbnail_src" : "images/avatars/avatar1.png",
+			"business_type" : 1,
+			"app_name" : "财富来",
+			"package_name" : "come.apk",
+			"class_name" : "CLASS",
+			"app_url" : "market.com"
 		},
 		{
-			"name" : "头像2",
-			"src" : "images/avatars/avatar2.png"
+			"element_name" : "头像2",
+			"src" : "images/avatars/avatar2.png",
+			"thumbnail_src" : "images/avatars/avatar2.png"
 		}]
 	}]
 }

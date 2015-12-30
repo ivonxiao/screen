@@ -157,6 +157,7 @@ function closeWin() {
                 }
                 if (jQuery.trim(key) == jQuery.trim(a)) {
                     var eve = jQuery(_this).find("[name='" + name + "']");
+                   
                     if (jQuery(eve).length > 1) {
                         for (var i = 0; i < jQuery(eve).length; i++) {
                             //判断单选按钮  
@@ -167,7 +168,12 @@ function closeWin() {
                             }
                         }
                     } else {
-                        jQuery(eve).val(val);
+                        //如果为文件类型,不处理
+                        if(eve.is(':file'));
+                        else {
+                            jQuery(eve).val(val);
+                        }
+                        
                     }
                 }
             }

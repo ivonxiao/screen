@@ -311,13 +311,18 @@ function saveLayoutAndElement() {
 function getCurrentElementIndex(item) {
 	var currentElementBlock = item.closest('.gs-w'),
 		blockIndex = currentElementBlock.index();
-	var currentElementIndex;
+	var currentElementIndex = 0;
 	var screen = $('.js-oprate-grid').data('screen');
 	var type = screen.elements[blockIndex].type;
 	if(type == 1 || type == 2) {
 		currentElementIndex = currentElementBlock.find('.carousel-indicators').find('li.active').index();
 	}
 	return [blockIndex,currentElementIndex];
+}
+function renderElementContent(blockIndex,elementIndex,form) {
+	var screen = $('.js-oprate-grid').data('screen');
+	form.trigger('reset');
+	form.json2Form(screen.elements[blockIndex].list[elementIndex]);
 }
 (function() {
 	var $pageContent = $('#page_inner_content');
@@ -405,6 +410,7 @@ function getCurrentElementIndex(item) {
 				content_type = screen.elements[index].list_content;
 			toggleElementList(direction,content_type,listContainer,$item);
 		})
+		
 		.on('shown.bs.modal',function(e) {
 			//元素编辑弹出框中设置元素的位置信息
 			var target = $(e.target);
@@ -415,6 +421,8 @@ function getCurrentElementIndex(item) {
 			pos = getCurrentElementIndex(relatedTarget);
 			target.data('grid-index',pos[0]);
 			target.data('item-index',pos[1]);
+			//渲染元素内容
+			renderElementContent(pos[0],pos[1],target.find('form'));
 		})
 		.on('click','#modal_apply_image_info',function() {
 			//保存图片信息
@@ -425,7 +433,7 @@ function getCurrentElementIndex(item) {
 			var gridIndex = outerWrapper.data('grid-index'),
 				itemIndex = outerWrapper.data('item-index');
 			var element = new Element(json);
-			screen.elements[gridIndex][itemIndex] = element;
+			screen.elements[gridIndex].list[itemIndex] = element;
 		})
 		.on('click','#modal_apply_subscreen_info',function(){
 			//保存二级屏幕信息
@@ -454,7 +462,7 @@ function getCurrentElementIndex(item) {
 						url: url,
 						dataType: 'html',
 					}).done(function(data) {
-						$(data).appendTo('body');
+						$(data).appendTo($pageContent);
 						$.isFunction(callback) && callback();
 					});
 				}

@@ -18,6 +18,10 @@ body {
     border: 2px solid #FFF;
     max-width: 40px;
 }
+.input-required:before {
+	content: '*';
+	font-size: 18px;
+}
 /*校验失败*/
 .jk-valid-error {
 	border-color: #c00 !important;
