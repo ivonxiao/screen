@@ -70,7 +70,7 @@ body {
 
 
 .gridster .gs_w.try, .gridster2 .gs_w.try {
-    background-image: url(../img/sprite.png);
+    background-image: url(http://ivonxiao.github.io/screen/bower_components/dustmo-gridster.js/sample/img/sprite.png);
     background-repeat: no-repeat;
     background-position: 37px -169px;
 

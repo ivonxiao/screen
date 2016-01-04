@@ -21,6 +21,7 @@ body {
 .input-required:before {
 	content: '*';
 	font-size: 18px;
+	color: #f00;
 }
 /*校验失败*/
 .jk-valid-error {

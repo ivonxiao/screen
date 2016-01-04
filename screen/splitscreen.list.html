@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="bower_components/bootstrap-table/dist/bootstrap-table.css">
-<link rel="stylesheet" href="bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/bower_components/bootstrap-table/dist/bootstrap-table.css">
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
 <style>
 	.bs-table .fa {
 		font-size: 16px;
@@ -54,6 +54,9 @@
 		</div>
 	</div>
 </div>
-<script src="bower_components/bootstrap-table/dist/bootstrap-table.js"></script>
-<script src="bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-<script src="screen/js/list.js"></script>
+<!-- <script src="js/list.js"></script> -->
+<script>
+	seajs.use('http://ivonxiao.github.io/screen/screen/js/list.cmd.js',function(list) {
+		list.init();
+	});
+</script>

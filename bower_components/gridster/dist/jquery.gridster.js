@@ -1174,8 +1174,8 @@
     * @method add_widget
     * @param {String|HTMLElement} html The string representing the HTML of the widget
     *  or the HTMLElement.
-    * @param {Number} [size_x] The nÂº of rows the widget occupies horizontally.
-    * @param {Number} [size_y] The nÂº of columns the widget occupies vertically.
+    * @param {Number} [size_x] The næ½ of rows the widget occupies horizontally.
+    * @param {Number} [size_y] The næ½ of columns the widget occupies vertically.
     * @param {Number} [col] The column the widget should start in.
     * @param {Number} [row] The row the widget should start in.
     * @param {Array} [max_size] max_size Maximun size (in units) for width and height.
@@ -1188,7 +1188,7 @@
         size_x || (size_x = 1);
         size_y || (size_y = 1);
 
-        //¼ì²é¿ÉÓÃ¿Õ¼ä
+        //æ£€æŸ¥å¯ç”¨ç©ºé—´
         var max_cols = 0,
             max_rows = 0,
             extra_place_exist = false;
@@ -1559,8 +1559,8 @@
     * Get the most left column below to add a new widget.
     *
     * @method next_position
-    * @param {Number} size_x The nÂº of rows the widget occupies horizontally.
-    * @param {Number} size_y The nÂº of columns the widget occupies vertically.
+    * @param {Number} size_x The næ½ of rows the widget occupies horizontally.
+    * @param {Number} size_y The næ½ of columns the widget occupies vertically.
     * @return {Object} Returns a grid coords object representing the future
     *  widget coords.
     */
@@ -2251,7 +2251,7 @@
             rowCnt = 0,
             is_row_overflow = false;
        
-        //Çø¿é±ä¿í»ò±ä¸ßÊ±½øĞĞÅĞ¶Ï
+        //åŒºå—å˜å®½æˆ–å˜é«˜æ—¶è¿›è¡Œåˆ¤æ–­
         if(inc_units_x > 0 || inc_units_y > 0) {    
             for(i=this.resize_initial_col;i<base_col;i++) {
                 curRows = $.map(this.gridmap[i],function(val,idx) {if(val) return val;}).length;
@@ -2263,7 +2263,7 @@
                     break;
                 }
             }
-            //À©Õ¹ÁĞ
+            //æ‰©å±•åˆ—
             for(i=0; i< inc_units_x; i++) {
                 col = base_col + i;
                 if (is_row_overflow || col > this.cols) break;
@@ -2363,7 +2363,7 @@
             self = this,
             init_col = this.$preview_holder.data('col'),
             init_cols= [];
-        // ´ïµ½×î´óĞĞÏŞÖÆ
+        // è¾¾åˆ°æœ€å¤§è¡Œé™åˆ¶
         for(i=0; i< player_size_x; i++) {
             init_cols.push(init_col + i);
         }
@@ -2425,7 +2425,7 @@
             self = this,
             init_col = this.$preview_holder.data('col'),
             init_cols= [];
-        // ´ïµ½×î´óĞĞÏŞÖÆ
+        // è¾¾åˆ°æœ€å¤§è¡Œé™åˆ¶
         for(i=0; i< player_size_x; i++) {
             init_cols.push(init_col + i);
         }
@@ -2832,7 +2832,7 @@
         var min_row = widget_grid_data.row;
         var $widgets_under_player = this.get_widgets_under_player();
         if(this.$player.data('row-pos') === undefined) {
-            //Ê×´Î¼ÇÂ¼ÆäĞĞÎ»ÖÃ
+            //é¦–æ¬¡è®°å½•å…¶è¡Œä½ç½®
             this.$player.data('row-pos',widget_grid_data.row);
             return widget_grid_data.row;
         }

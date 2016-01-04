@@ -5,21 +5,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<title>Document</title>
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="assets/css/ace.min.css">
+	<link rel="stylesheet" href="http://ivonxiao.github.io/screen/bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/assets/css/ace.min.css">
 <!--[if lte IE 8]>
-<script src="js/static/html5shiv.js"></script>
-<script src="js/static/respond.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/js/static/html5shiv.js"></script>
+<script src="http://ivonxiao.github.io/screen/js/static/respond.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="http://ivonxiao.github.io/screen/assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="http://ivonxiao.github.io/screen/assets/css/ace-ie.min.css" />
 		<![endif]-->
-<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/css/common.css">
 
 </head>
 <body class="no-skin">
@@ -34,7 +34,7 @@
       		</button>
 
       		<a href="javascript:;" class="navbar-brand">
-				<small><img style="width:135px; height:32px;" alt="" src="images/top_logo.png">
+				<small><img style="width:135px; height:32px;" alt="" src="http://ivonxiao.github.io/screen/images/top_logo.png">
 					<span id="unit" name="unit">江西家开平台</span>
 				</small>
 			</a>
@@ -42,7 +42,7 @@
 		<ul class="nav navbar-nav pull-right">
 			<li class="dropdown light-blue">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-	          	<img class="nav-user-photo" src="images/avatars/9_s.png" alt="管理员头像" />
+	          	<img class="nav-user-photo" src="http://ivonxiao.github.io/screen/images/avatars/9_s.png" alt="管理员头像" />
 	          	<span class="user-info">
 	          		<small>欢迎您,</small>test
 	          	</span>
@@ -80,16 +80,23 @@
 			<b class="arrow"></b>
 			<ul class="submenu nav-show">
 				<li>
-					<a href="screen/splitscreen.list.html" class="js-nav-link">
+					<a href="../screen/splitscreen.list.html" class="js-nav-link">
 						<i class="menu-icon fa fa-caret-right"></i>
 						分屏配置
 					</a>
 					<b class="arrow"></b>	
 				</li>
-				<li class="active">
-					<a href="screen/screen_manage.html" class="js-nav-link">
+				<li>
+					<a href="../screen/screen_manage.html" class="js-nav-link">
 						<i class="menu-icon fa fa-caret-right"></i>
-						屏幕管理
+						新建分屏
+					</a>
+					<b class="arrow"></b>	
+				</li>
+				<li class="active">
+					<a href="../screen/screen.set.html" class="js-nav-link">
+						<i class="menu-icon fa fa-caret-right"></i>
+						设置屏幕
 					</a>
 					<b class="arrow"></b>	
 				</li>
@@ -166,18 +173,29 @@
 
 
 	<!--[if lte IE 8]>
-<script src="js/static/jquery1x.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/js/static/jquery1x.min.js"></script>
 <![endif]-->
 <script>
-	window.jQuery || document.write("<script src='bower_components/jquery/dist/jquery.js'>"+"<"+"/script>")
+	(function(){
+		var url = 'http://ivonxiao.github.io/screen/bower_components/jquery/dist/jquery.js';
+		window.jQuery || document.write("<script src='" + url + "'>" + "<" + "/script>");
+	})();
 </script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/bootbox.js/bootbox.js"></script>
-<script src="assets/js/ace-extra.min.js"></script>
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
-<script src="js/app/common.js"></script>
-<script src="js/app/sidebar.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/bootbox.js/bootbox.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/handlebars/handlebars.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/fuelux/js/wizard.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/gridster/dist/jquery.gridster.js"></script> 
+<script src="http://ivonxiao.github.io/screen/assets/js/ace-extra.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/jquery-mockjax/dist/jquery.mockjax.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/bootstrap-table/dist/bootstrap-table.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/assets/js/ace-elements.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/assets/js/ace.min.js"></script>
+<script src="http://ivonxiao.github.io/screen/bower_components/seajs/dist/sea.js"></script>
+<script src="http://ivonxiao.github.io/screen/js/app/sidebar.js"></script>
+<script src="http://ivonxiao.github.io/screen/js/app/common.js"></script>
 
 	<div class="footer">
 		<div class="footer-inner">
@@ -189,5 +207,10 @@
 			</div>
 		</div>
 	</div>
+	<script>
+	seajs.config({
+		base: 'bower_components/seajs/dist/'
+	});
+	</script>
 </body>
 </html>

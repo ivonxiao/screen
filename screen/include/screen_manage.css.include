@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="../../bower_components/gridster/dist/jquery.gridster.min.css">
+<link rel="stylesheet" href="../../bower_components/jquery-ui/themes/base/all.css">
+<link rel="stylesheet" href="../../css/atom.css">
+<link rel="stylesheet" href="../css/splitscreen.css">
