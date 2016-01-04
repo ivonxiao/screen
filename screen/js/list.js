@@ -1,13 +1,13 @@
 $(function() {
 	var REQUEST_URL = {
-		'edit_screen_by_id' : ''
+		'edit_screen_by_id' : '',
+		'get_list' : 'http://ivonxiao.github.io/screen/screen/model/splitscreen.list.json'
 	}
-
 	$('.js-date-widget').datetimepicker({
     	format: "yyyy-mm-dd hh:ii"
     });
     $('#splitscreen_table').bsTableInit({
-		url: 'screen/model/splitscreen.list.json',
+		url: REQUEST_URL.get_list,
 		spanPageCheck: false,
 		uniqueId: 'screen_id',
 		columns:[
@@ -47,10 +47,9 @@ $(function() {
 	// 编辑分屏
 	$table.on('click','.fa-pencil-square',function() {
 		var screenId = $(this).closest('tr').data('uniqueid');
-		var url = 'screen/screen_manage.html';
+		var url = 'http://ivonxiao.github.io/screen/screen/screen_manage.html';
 		$('#main_content').load(url,function() {
 			renderScreenById(screenId);
-		});
-		
+		});	
 	});
 });

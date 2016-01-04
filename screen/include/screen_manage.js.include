@@ -1,0 +1,34 @@
+<script src="../../bower_components/handlebars/handlebars.js"></script>
+<script src="../../bower_components/underscore/underscore.js"></script>
+<script src="../../bower_components/backbone/backbone.js"></script>
+<script src="../../bower_components/fuelux/js/wizard.js"></script>
+<script src="../../bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="../../bower_components/gridster/dist/jquery.gridster.js"></script>
+<script src="../../bower_components/jquery-mockjax/dist/jquery.mockjax.js"></script>
+<!-- 模板文件 -->
+<script src="../template/element2.js"></script>
+<script src="../template/elementlist.js"></script>
+<script src="../js/create_splitscreen.js"></script>
+<script>
+	$.mockjax({
+		type: 'post',
+		url: '/splitscreen/addprop',
+		contentType: 'application/json',
+		responseText: {
+			screenId: 1,
+			extra_cols: 2,
+			rows: 3,
+			cols: 4,
+			title: '分屏1',
+			name: '第一屏',
+			description: '这只是假定的测试数据',
+			category1: 1,
+			category2: 2,
+			min_version: 2,
+			resolution: '1080P',
+			logo: '/url-logo.png',
+			bglogo: '/url-bglogo.png'
+		}
+	});
+	
+</script>

@@ -106,10 +106,10 @@
   -webkit-mask-size: 100%;
 }
 .chrome-tabs .chrome-tab .chrome-tab-curves-left, .chrome-tabs .chrome-tab .chrome-tab-curves-left-highlight, .chrome-tabs .chrome-tab .chrome-tab-curves-left-shadow {
-  -webkit-mask-image: url("svg/tab-left.svg");
+  -webkit-mask-image: url("http://ivonxiao.github.io/screen/js/static/chrome-tabs/svg/tab-left.svg");
 }
 .chrome-tabs .chrome-tab .chrome-tab-curves-right, .chrome-tabs .chrome-tab .chrome-tab-curves-right-highlight, .chrome-tabs .chrome-tab .chrome-tab-curves-right-shadow {
-  -webkit-mask-image: url("svg/tab-right.svg");
+  -webkit-mask-image: url("http://ivonxiao.github.io/screen/js/static/chrome-tabs/svg/tab-right.svg");
 }
 .chrome-tabs .chrome-tab .chrome-tab-curves-left, .chrome-tabs .chrome-tab .chrome-tab-curves-right {
   top: 1px;

@@ -8,21 +8,21 @@
  *
  * http://api.jqueryui.com/category/theming/
  */
-@import url("core.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/core.css");
 
-@import url("accordion.css");
-@import url("autocomplete.css");
-@import url("button.css");
-@import url("datepicker.css");
-@import url("dialog.css");
-@import url("draggable.css");
-@import url("menu.css");
-@import url("progressbar.css");
-@import url("resizable.css");
-@import url("selectable.css");
-@import url("selectmenu.css");
-@import url("sortable.css");
-@import url("slider.css");
-@import url("spinner.css");
-@import url("tabs.css");
-@import url("tooltip.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/accordion.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/autocomplete.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/button.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/datepicker.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/dialog.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/draggable.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/menu.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/progressbar.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/resizable.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/selectable.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/selectmenu.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/sortable.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/slider.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/spinner.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/tabs.css");
+@import url("http://ivonxiao.github.io/screen/bower_components/jquery-ui/themes/base/tooltip.css");

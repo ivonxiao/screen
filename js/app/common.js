@@ -245,7 +245,8 @@ function closeWin() {
  */
 var showLoading = function(){
     if (!document.getElementById('_loading')){
-        $('body').append('<div id="_loading" style="position: fixed; top: 40%;left:50%;margin-left: -100px;margin-top:-15px;width:200px;height:30px;background-color: #f5f5f5;text-align:center;z-index:1000;"><div style="margin-top:5px;"><img src="../../images/loading.gif"/><span style="margin-left:10px;">正在处理,请稍候...</span></div></div>');
+        var src = 'http://ivonxiao.github.io/screen/images/loading.gif';
+        $('body').append('<div id="_loading" style="position: fixed; top: 40%;left:50%;margin-left: -100px;margin-top:-15px;width:200px;height:30px;background-color: #f5f5f5;text-align:center;z-index:1000;"><div style="margin-top:5px;"><img src="' + src + '"/><span style="margin-left:10px;">正在处理,请稍候...</span></div></div>');
     }
     $('#_loading').floatDiv({show:true});
 }

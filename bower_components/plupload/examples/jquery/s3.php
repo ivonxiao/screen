@@ -56,12 +56,12 @@ $signature = base64_encode(hash_hmac('sha1', $policy, $secret, true));
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
 <!-- Load plupload and all it's runtimes and finally the UI widget -->
-<link rel="stylesheet" href="../../js/jquery.ui.plupload/css/jquery.ui.plupload.css" type="text/css" />
+<link rel="stylesheet" href="http://ivonxiao.github.io/screen/bower_components/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css" type="text/css" />
 
 
 <!-- production -->
-<script type="text/javascript" src="../../js/plupload.full.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
+<script type="text/javascript" src="http://ivonxiao.github.io/screen/bower_components/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="http://ivonxiao.github.io/screen/bower_components/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
 
 <!-- debug 
 <script type="text/javascript" src="../../js/moxie.js"></script>

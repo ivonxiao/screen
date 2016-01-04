@@ -1,10 +1,10 @@
 var SPLITSCREEN_REQUEST_URL = {
 	'add_splitscreen_prop' : '/splitscreen/addprop',
-	'get_screen_info': 'screen/model/splitscreen.info.json',
-	'get_image_modal' : '/screen/element.img.html',
-	'get_video_modal' : '/screen/element.video.html',
-	'get_webpage_modal' : '/screen/element.webpage.html',
-	'get_subscreen_modal' :　'/screen/element.subscreen.html'
+	'get_screen_info': 'http://ivonxiao.github.io/screen/screen/model/splitscreen.info.json',
+	'get_image_modal' : 'http://ivonxiao.github.io/screen/screen/element.img.html',
+	'get_video_modal' : 'http://ivonxiao.github.io/screen/screen/element.video.html',
+	'get_webpage_modal' : 'http://ivonxiao.github.io/screen/screen/element.webpage.html',
+	'get_subscreen_modal' :　'http://ivonxiao.github.io/screen/screen/element.subscreen.html'
 };
 var CONSTVAL = {
 	'list_content_text' : 1,
@@ -53,7 +53,7 @@ function setForm(data) {
 		input = $('#' + SPLITSCREEN_ARGMAP[key]);
 		if(input.is(':file')) {
 			if(key === 'bglogo') {
-				console.log(data[key])
+				//console.log(data[key])
 				bgGrid.css('background','url(' + data[key] + ')');
 			}
 		}
@@ -96,7 +96,7 @@ var initScreenBaseGrid = function(row,col) {
 var Element = function(options) {
 	this.type = 1;
 	this.name = '';
-	this.src = '../../images/default.png';
+	this.src = 'http://ivonxiao.github.io/screen/images/default.png';
 	this.thumbnail_src = this.src;
 	this.init(options);
 }
